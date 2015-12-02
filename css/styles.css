@@ -1,0 +1,45 @@
+.calc-container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.nav-bar {
+	text-align: center;
+}
+.meal-details {
+	float: left;
+	width: 450px;
+	border: 2px solid black;
+}
+h2 {
+	text-align: center;
+	border-bottom: 2px solid black;
+	padding-bottom: 10px;
+}
+.meal-content {
+	width: 350px;
+	margin: 0 auto;
+}
+.buttons {
+	padding-top: 97px;
+	padding-bottom: 80px;
+}
+.customer-charges {
+	width: 450px;
+	border: 2px solid black;
+	float: right;
+}
+.charges-content {
+	width: 350px;
+	margin: 0 auto;
+}
+.earnings-info {
+	width: 450px;
+	border: 2px solid black;
+	float: right;
+	margin-top: 10px;
+}
+.earnings-content {
+	width: 350px;
+	margin: 0 auto;
+}
