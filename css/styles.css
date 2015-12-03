@@ -2,41 +2,47 @@
 	width: 1000px;
 	margin: 0 auto;
 }
-
 .nav-bar {
-	text-align: center;
+	/*text-align: center;*/
+}
+.calc-content {
+	margin: 0 auto;
+	width: 1000px;
 }
 .meal-details {
 	float: left;
-	width: 500px;
+	width: 450px;
 	border: 2px solid black;
+	margin-right: 10px;
 }
 h2 {
 	text-align: center;
+	margin-top: 0;
 	border-bottom: 2px solid black;
 	padding-bottom: 10px;
+	background-color: #f5f5dc;
 }
 .meal-content {
 	width: 350px;
 	margin: 0 auto;
 }
 .buttons {
-	padding-top: 97px;
+	padding-top: 90px;
 	padding-bottom: 80px;
 }
 .customer-charges {
-	width: 500px;
+	width: 400px;
 	border: 2px solid black;
-	float: right;
+	float: left;
 }
 .charges-content {
 	width: 350px;
 	margin: 0 auto;
 }
 .earnings-info {
-	width: 500px;
+	width: 400px;
 	border: 2px solid black;
-	float: right;
+	float: left;
 	margin-top: 10px;
 }
 .earnings-content {
