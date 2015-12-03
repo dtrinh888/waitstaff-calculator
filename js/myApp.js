@@ -39,7 +39,7 @@ angular.module('myApp', ["ngMessages"])
 			$scope.mealDetails.$setPristine();
 			$scope.mealDetails.$setUntouched();
 			$scope.cancelMeal();
-			$scope.totalTip = 0;
+			$scope.tipTotal = 0;
 			$scope.mealCount = 0;
 		};
 	}]);
