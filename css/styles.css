@@ -1,6 +1,5 @@
 .calc-container {
-	width: 1000px;
-	margin: 0 auto;
+
 }
 .nav-bar {
 	/*text-align: center;*/
@@ -10,10 +9,7 @@
 	width: 1000px;
 }
 .meal-details {
-	float: left;
-	width: 400px;
 	border: 2px solid black;
-	margin-right: 10px;
 }
 h2 {
 	text-align: center;
@@ -23,32 +19,20 @@ h2 {
 	background-color: #f5f5dc;
 	font-size: 40px;
 }
-.meal-content {
-	width: 350px;
+.content {
 	margin: 0 auto;
+	padding: 10px;
 }
 .buttons {
 	padding-top: 85px;
 	padding-bottom: 80px;
 }
 .customer-charges {
-	width: 400px;
 	border: 2px solid black;
-	float: left;
-}
-.charges-content {
-	width: 350px;
-	margin: 0 auto;
+	margin-bottom: 10px;
 }
 .earnings-info {
-	width: 400px;
 	border: 2px solid black;
-	float: left;
-	margin-top: 10px;
-}
-.earnings-content {
-	width: 350px;
-	margin: 0 auto;
 }
 .reset {
 	margin-top: 10px;
