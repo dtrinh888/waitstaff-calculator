@@ -1,0 +1,23 @@
+<div class="earnings-info" name="earningsInfo">
+	<h2>My Earnings Info</h2>
+	<div class="content">
+		<p>
+			<label>Tip Total: </label>
+			<span>
+				{{ tipTotal | currency }}
+			</span>
+		</p>
+		<p>
+			<label>Meal Count: </label>
+			<span>
+				{{ mealCount }}
+			</span>
+		</p>
+		<p>
+			<label>Average Tip Per Meal: </label>
+			<span>
+				{{ avgTipTotal() | currency }}
+			</span>
+		</p>
+	</div>
+</div>
