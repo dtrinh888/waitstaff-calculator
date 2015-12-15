@@ -1,7 +1,7 @@
 angular.module('myApp', ['ngMessages', 'ngRoute'])
 	.config(['$routeProvider', function($routeProvider){
 		$routeProvider.when('/', {
-			templateUrl: 'home.html',
+			templateUrl: 'index.html',
 			controller: 'HomeCtrl'
 		})
 		.when('/new-meal', {
@@ -13,12 +13,17 @@ angular.module('myApp', ['ngMessages', 'ngRoute'])
 			controller: 'myEarningsCtrl'
 		});
 	}])
-	.controller('newMealCtrl', ['$scope', function($scope){
+	.run(['$rootScope', function($rootScope) {
+			$rootScope.tipTotal = 0;
+			$rootScope.mealCount = 0;	
+	}])
+	.controller('HomeCtrl', function($scope){
+
+	})
+	.controller('newMealCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
 		$scope.mealPrice = '';
 		$scope.taxRate = '';
 		$scope.tipPercentage = '';
-		$scope.tipTotal = 0;
-		$scope.mealCount = 0;
 		$scope.subtotal = 0;
 		$scope.tip = 0;
 		$scope.total = 0;
@@ -27,8 +32,8 @@ angular.module('myApp', ['ngMessages', 'ngRoute'])
 				$scope.subtotal = $scope.mealPrice * (1+ ($scope.taxRate/100));
 				$scope.tip = $scope.subtotal * ($scope.tipPercentage/100);
 				$scope.total = $scope.subtotal + $scope.tip;
-				$scope.tipTotal += $scope.tip;
-				$scope.mealCount++;
+				$rootScope.tipTotal += $scope.tip;
+				$rootScope.mealCount++;
 				$scope.mealPrice = '';
 				$scope.taxRate = '';
 				$scope.tipPercentage = '';
@@ -43,14 +48,20 @@ angular.module('myApp', ['ngMessages', 'ngRoute'])
 			$scope.total = '';
 		};	
 	}])
-	.controller('myEarningsCtrl', ['$scope', function($scope){
-			$scope.mealDetails.$setPristine();
-			$scope.mealDetails.$setUntouched();
-			$scope.cancelMeal();
-			$scope.tipTotal = 0;
-			$scope.mealCount = 0;		
-	}])
-	.controller('tipCalcCtrl', ['$scope', function($scope){
+	.controller('myEarningsCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
+			$scope.avgTipTotal = function(){
+			if ($rootScope.mealCount !== 0){
+				return $rootScope.tipTotal / $rootScope.mealCount;
+			} else {
+				return 0;
+			}
+		};
+		$scope.resetEarnings = function(){
+			$rootScope.tipTotal = '';
+			$rootScope.mealCount = '';
+		};	
+	}]);
+	/*.controller('tipCalcCtrl', ['$scope', function($scope){
 		$scope.mealPrice = '';
 		$scope.taxRate = '';
 		$scope.tipPercentage = '';
@@ -93,4 +104,4 @@ angular.module('myApp', ['ngMessages', 'ngRoute'])
 			$scope.tipTotal = 0;
 			$scope.mealCount = 0;
 		};
-	}]);
+	}]);*/
