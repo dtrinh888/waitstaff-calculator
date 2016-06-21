@@ -1,7 +1,7 @@
 angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate'])
 	.config(['$routeProvider', function($routeProvider){
 		$routeProvider.when('/', {
-			templateUrl: 'index.html',
+			templateUrl: 'home.html',
 			controller: 'HomeCtrl'
 		})
 		.when('/new-meal', {
