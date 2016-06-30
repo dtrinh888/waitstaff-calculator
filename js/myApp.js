@@ -1,7 +1,7 @@
 angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate'])
 	.config(['$routeProvider', function($routeProvider){
 		$routeProvider.when('/', {
-			templateUrl: 'index.html',
+			templateUrl: 'home.html',
 			controller: 'HomeCtrl'
 		})
 		.when('/new-meal', {
@@ -49,7 +49,7 @@ angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate'])
 		};	
 	}])
 	.controller('myEarningsCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
-			$scope.avgTipTotal = function(){
+		$scope.avgTipTotal = function(){
 			if ($rootScope.mealCount !== 0){
 				return $rootScope.tipTotal / $rootScope.mealCount;
 			} else {

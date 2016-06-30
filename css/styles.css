@@ -1,6 +1,9 @@
 .meal-details {
 	border: 2px solid black;
 }
+h3 {
+	padding-top: 10px;
+}
 h2 {
 	text-align: center;
 	margin-top: 0;
