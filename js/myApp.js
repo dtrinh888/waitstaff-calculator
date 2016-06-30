@@ -43,9 +43,6 @@ angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate'])
 			$scope.mealPrice = '';
 			$scope.taxRate = '';
 			$scope.tipPercentage = '';
-			$scope.subtotal = '';
-			$scope.tip = '';
-			$scope.total = '';
 		};	
 	}])
 	.controller('myEarningsCtrl', ['$scope', '$rootScope', function($scope, $rootScope){

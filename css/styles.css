@@ -1,9 +1,6 @@
 .meal-details {
 	border: 2px solid black;
 }
-h3 {
-	padding-top: 10px;
-}
 h2 {
 	text-align: center;
 	margin-top: 0;
@@ -11,6 +8,11 @@ h2 {
 	padding-bottom: 10px;
 	background-color: #f5f5dc;
 	font-size: 40px;
+}
+.instructions{
+	background-color: #f5f5dc;
+	padding: 15px;
+	margin-top: 20px;
 }
 .content {
 	margin: 0 auto;
